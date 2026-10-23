@@ -1,0 +1,7 @@
+streamlit>=1.40
+pandas
+numpy
+plotly>=5.24
+databricks-sdk>=0.40
+requests
+pyarrow

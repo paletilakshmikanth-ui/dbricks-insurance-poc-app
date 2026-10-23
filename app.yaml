@@ -1,0 +1,14 @@
+command: ["streamlit", "run", "app.py", "--server.port", "8000", "--server.address", "0.0.0.0", "--server.headless", "true"]
+env:
+  # Add a "Genie space" resource to the app (key: genie-space). Its id is injected here.
+  # Alternative: replace the next two lines with  - name: GENIE_SPACE_ID / value: "<space id from the Genie URL, after /rooms/>"
+  - name: GENIE_SPACE_ID
+    valueFrom: genie-space
+  - name: GOLD_CATALOG
+    value: "synthetic"
+  - name: GOLD_SCHEMA
+    value: "gold2"
+  - name: AS_OF_DATE
+    value: ""            # blank = today. Set 2026-10-09 to match the notebook's as-of date.
+  - name: CACHE_TTL_SECONDS
+    value: "3600"
